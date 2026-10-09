@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Assignments</title>
+  </head>
+
+  <body>
+    <!-- Task 1 -->
+    <h2>Task 1: Date and Time</h2>
+    <button id="dateBtn">Show date & time</button>
+    <p id="dateOutput"></p>
+
+    <!-- Task 2 -->
+    <h2>Task 2: Advertising Window</h2>
+    <button id="openBtn">Open ad window</button>
+    <button id="closeBtn">Close ad window</button>
+
+    <!-- Task 3 -->
+    <h2>Task 3: Even Number Regex</h2>
+    <p id="evenOutput"></p>
+
+    <!-- Task 4 -->
+    <h2>Task 4: User Info</h2>
+    <div id="welcome"></div>
+
+    <script>
+      /* ---------- Task 1 ---------- */
+      document.getElementById("dateBtn").addEventListener("click", () => {
+        document.getElementById("dateOutput").textContent =
+          new Date().toLocaleString();
+      });
+
+      /* ---------- Task 2 ---------- */
+      let adWindow = null;
+
+      document.getElementById("openBtn").addEventListener("click", () => {
+        setTimeout(() => {
+          adWindow = window.open("", "_blank", "width=500,height=400");
+          if (!adWindow) {
+            alert("Popup blocked! Allow popups for this page.");
+            return;
+          }
+          const paragraph =         
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+            "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ".repeat(
+              5,
+            );
+          adWindow.document.write(
+            "<h1>Special Offer!</h1>" + `<p>${paragraph}</p>`.repeat(4),
+          );
+        }, 3000); // 3 seconds
+      });
+
+      document.getElementById("closeBtn").addEventListener("click", () => {
+        if (adWindow && !adWindow.closed) {
+          adWindow.close();
+        }
+      });
+
+      /* ---------- Task 3 ---------- */
+      const evenRegex = /^\d*[02468]$/; // any digits, ending with an even digit
+
+      ["2341", "132", "29", "5578"].forEach((n) => {
+        document.getElementById("evenOutput").innerHTML +=
+          `"${n}" → ${evenRegex.test(n)}<br>`;
+      });
+
+      /* ---------- Task 4 ---------- */
+      const nameRegex = /^[A-Za-z\u0600-\u06FF\s]+$/; // letters only
+      const phoneRegex = /^\d{8}$/; // 8 digits
+      const mobileRegex = /^(010|011|012)\d{8}$/; // 11 digits, starts with 010/011/012
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // abc@123.com
+
+      // Keeps asking until the input is valid
+      function askUntilValid(message, regex, errorMsg) {
+        let value;
+        do {
+          value = prompt(message);
+          if (value === null) value = ""; // user pressed Cancel
+          value = value.trim();
+          if (!regex.test(value)) alert(errorMsg);
+        } while (!regex.test(value));
+        return value;
+      }
+
+      const userName = askUntilValid(
+        "Enter your name:",
+        nameRegex,
+        "Name must contain characters only, not numbers.",
+      );
+      const phone = askUntilValid(
+        "Enter your phone number (8 digits):",
+        phoneRegex,
+        "Phone must be exactly 8 digits.",
+      );
+      const mobile = askUntilValid(
+        "Enter your mobile number (11 digits):",
+        mobileRegex,
+        "Mobile must be 11 digits and start with 010, 011 or 012.",
+      );
+      const email = askUntilValid(
+        "Enter your email (e.g. abc@123.com):",
+        emailRegex,
+        "Invalid email format.",
+      );
+
+      // Color choice: red, green or blue
+      let color;
+      do {
+        color = (prompt("Choose a color: red, green or blue") || "")
+          .trim()
+          .toLowerCase();
+        if (!["red", "green", "blue"].includes(color)) {
+          alert("Please choose red, green or blue only.");
+        }
+      } while (!["red", "green", "blue"].includes(color));
+
+      // Display welcome message
+      const welcome = document.getElementById("welcome");
+      welcome.style.color = color;
+      welcome.innerHTML = `
+      <h3>Welcome, ${userName}!</h3>
+      <p>Today's date: ${new Date().toLocaleDateString()}</p>
+      <p>Phone: ${phone}</p>
+      <p>Mobile: ${mobile}</p>
+      <p>Email: ${email}</p>
+    `;
+    </script>
+  </body>
+</html>

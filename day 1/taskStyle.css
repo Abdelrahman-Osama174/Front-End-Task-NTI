@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
+}
+
+header,
+nav,
+footer {
+    grid-column: 1 / -1;
+}
+
+header,
+nav,
+section,
+aside,
+footer {
+    background-color: #e5e5e5;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+article {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+header{
+    width: 100%;
+    position: sticky;
+    top: 5px;
+}

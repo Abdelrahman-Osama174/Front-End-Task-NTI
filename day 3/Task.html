@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task 1</h1>
+    <button id="dateButton">Show Date</button>
+    <p id="dateHeader"></p>
+    <hr>
+    <h1>Task 2</h1>
+    
+    <hr>
+    <h1>Task 3</h1>
+    <p id="evenNumbers"></p>
+    <script>
+        document.getElementById("dateButton").addEventListener("click",() => {
+            document.getElementById("dateHeader").textContent= new Date().toLocaleString();
+        })
+        // Task 3 Even Numbers REGEX
+        const evenRegex =/^\d*[02468]$/;
+        ['2212','21313','454635','56363','98920'].forEach((n)=>{
+            document.getElementById("evenNumbers").innerHTML+= `"${n}" → ${evenRegex.test(n)}<br> `;
+        })
+
+    </script>
+</body>
+</html>

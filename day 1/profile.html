@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Abdelrahman Osama - Profile</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .logo-header {
+            height: 50px;
+            background-color: darkolivegreen;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .logo {
+            width: 25px;
+            height: 25px;
+            object-fit: contain;
+            border: 1px solid;
+            border-radius: 10px;
+        }
+
+        .navbar {
+            height: 35px;
+            background-color: goldenrod;
+        }
+
+        .left-sidebar {
+            width: 20%;
+            background-color: brown;
+            vertical-align: top;
+            padding: 10px;
+        }
+
+        .main-content {
+            width: 60%;
+            background-color: yellow;
+            vertical-align: top;
+            padding: 20px;
+        }
+
+        .right-sidebar {
+            width: 20%;
+            background-color: slategrey;
+            vertical-align: top;
+            padding: 15px;
+        }
+
+        .profile-image-container {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 1px solid #444;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .news-title {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .news-content {
+            text-align: left;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+        }
+
+        .footer {
+            background-color: sienna;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+
+        <!-- Website Header -->
+        <tr>
+            <th colspan="3" class="logo-header">
+                <div class="logo-container">
+                    <span>Website Logo</span>
+                    <img class="logo"
+                         src="img/image1.png"
+                         alt="Website Logo">
+                </div>
+            </th>
+        </tr>
+
+        <!-- Navigation Bar -->
+        <tr>
+            <th colspan="3" class="navbar">
+                Nav Bar
+            </th>
+        </tr>
+
+        <!-- Page Content -->
+        <tr>
+
+            <!-- Left Sidebar -->
+            <td class="left-sidebar">
+
+                <p style="background-color: gray; color: black; padding: 8px;">
+                    Welcome to my personal profile.
+                    Here you can find information about me,
+                    my interests, and my hobbies.
+                </p>
+
+                <hr>
+
+                <h3>My Links</h3>
+
+                <ul>
+                    <li>
+                        <a href="https://github.com/">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/">LinkedIn</a>
+                    </li>
+                </ul>
+
+                <hr>
+
+                <div>Abdelrahman Osama</div>
+
+            </td>
+
+            <!-- Main Content -->
+            <td class="main-content">
+
+                <h2>My Profile</h2>
+
+                <ul>
+                    <li>Name: Abdelrahman Osama</li>
+                    <li>Age: 24</li>
+                    <li>Location: Menouf, Menoufia</li>
+                    <li>Phone: 01121863185</li>
+
+                    <li>
+                        University: Menoufia University
+                    </li>
+
+                    <li>
+                        Faculty: Faculty of Electronic Engineering
+                    </li>
+
+                    <li>
+                        Department: Computer Science Engineering
+                    </li>
+
+                    <li>
+                        Career: Java Backend Developer
+                    </li>
+
+                    <li>
+                        Hobbies:
+                        <ol type="I">
+                            <li>Programming</li>
+                            <li>Learning new technologies</li>
+                            <li>Solving problems</li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        Email:
+                        <a href="mailto:your-email@example.com">
+                            My Email
+                        </a>
+                    </li>
+                </ul>
+
+            </td>
+
+            <!-- Right Sidebar -->
+            <td class="right-sidebar">
+
+                <div class="profile-image-container">
+                    <img class="profile-image"
+                         src="img/image.png"
+                         alt="Profile Picture">
+                </div>
+
+                <hr>
+
+                <div>
+                    <p class="news-title">News</p>
+
+                    <p class="news-content">
+                        I am a Computer Science Engineering graduate
+                        interested in Java, Spring Boot, backend
+                        development, and building RESTful APIs.
+                    </p>
+                </div>
+
+            </td>
+
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+            <th colspan="3" class="footer">
+                Footer - Abdelrahman Osama
+            </th>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

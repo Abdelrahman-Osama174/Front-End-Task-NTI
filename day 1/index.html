@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="shortcut icon" href="img/form.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="welcome.html" method="post">
+        <fieldset>
+            <legend>Register</legend>
+
+            <div>
+                <label for="username">Username: </label>
+                <input type="text" name="username" id="username"
+                       value="Abdelrahman Osama" required>
+            </div>
+
+            <div>
+                <label for="pass">Password: </label>
+                <input type="password" name="pass" id="pass"
+                       placeholder="Enter Password ........."
+                       required minlength="3" maxlength="15">
+            </div>
+
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email"
+                       placeholder="Enter Email ......"
+                       required>
+            </div>
+
+            <div>
+                <label for="check">Remember me</label>
+                <input type="checkbox" name="check" id="check">
+            </div>
+
+            <button type="submit" style="background-color: aqua;">
+                Submit
+            </button>
+
+        </fieldset>
+    </form>
+</body>
+
+</html>

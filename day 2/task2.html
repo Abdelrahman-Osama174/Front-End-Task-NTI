@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: relative;
+            right: -80%;
+            top: 10%;
+        }
+        h1{
+            padding-left: 5px;
+        }
+        header{
+            display: grid inline;
+            grid-template-columns: repeat(3,1fr);
+            background-color: cadetblue;
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 1%;
+        }
+        input{
+            height: 20px;
+            width: 190px;
+            position: relative;
+            right: -70%;
+            top: 15%;
+        }
+
+        .top{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+        .top-articale{
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: blueviolet;
+        }
+        .main{
+            display: grid;
+            grid-template-columns: 70% 30%;
+        }
+        .body{
+            display: grid;
+        }
+        .ele{
+            display: flex;
+            border: 2px double orangered;
+            border-radius: 5px;
+            align-items: center;
+            gap: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dashboard Overview</h1>
+        <input type="text" placeholder="Search ..." >
+        <img src="img/abdo.jpg" alt="">
+    </header>
+
+    <section class="top">
+        <article class="top-articale">
+            <h3>Total</h3>
+            <h2>$40,800</h2>
+        </article>
+        <article class="top-articale">
+            <h3>Total</h3>
+            <h2>$40,800</h2>
+        </article>
+        <article class="top-articale">
+            <h3>Total</h3>
+            <h2>$40,800</h2>
+        </article>
+    </section>
+    <hr>
+    <section class="main">
+        <article class="body">
+            <div>
+            <h4>Revenues </h4>
+            <h6>Top associations</h6>
+            </div>
+        </article>
+        <aside class="aside">
+            <div>
+                <h3>Top Products</h3>
+            </div>
+            <div class="aside-divs">
+                <div class="ele">
+                    <h3>Total</h3>
+                    <h2>$40,800</h2>
+                </div>
+                <div class="ele">
+                    <h3>Total</h3>
+                    <h2>$40,800</h2>
+                </div>
+                <div class="ele">
+                    <h3>Total</h3>
+                    <h2>$40,800</h2>
+                </div>
+            </div>
+        </aside>
+    </section>
+</body>
+</html>
