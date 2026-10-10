@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cascading Select Menus</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <label for="band">Band:</label>
+  <select id="band">
+    <option value="">Please select</option>
+  </select>
+
+  <label for="artist">Artist:</label>
+  <select id="artist" disabled>
+    <option value="">Please select a band first</option>
+  </select>
+
+  <p id="status" role="status" aria-live="polite"></p>
+</body>
+</html>
